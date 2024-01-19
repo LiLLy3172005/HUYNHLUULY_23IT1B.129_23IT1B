@@ -1,16 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.qlnn1.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.qlnn1.ControllMain">
+   <left>
+      <AnchorPane prefHeight="802.0" prefWidth="350.0" style="-fx-background-color: #604c40;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fill="#1f93ff00" layoutX="176.0" layoutY="110.0" radius="77.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <ImageView fitHeight="168.0" fitWidth="159.0" layoutX="96.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(7).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="DashBoard" layoutX="6.0" layoutY="258.0" mnemonicParsing="false" onAction="#conectDashBoard" prefHeight="59.0" prefWidth="333.0" style="-fx-background-color: #bd9f87;" text="DashBoard">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddCustomer" layoutX="6.0" layoutY="340.0" mnemonicParsing="false" onAction="#conectAdd" prefHeight="59.0" prefWidth="337.0" style="-fx-background-color: #bd9f87;" text="Add Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="RemoveCustomer" layoutX="7.0" layoutY="421.0" mnemonicParsing="false" onAction="#conectRemove" prefHeight="59.0" prefWidth="336.0" style="-fx-background-color: #bd9f87;" text="Remove Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="EditCustomer" layoutX="6.0" layoutY="506.0" mnemonicParsing="false" onAction="#conectEditButtonOnAction" prefHeight="59.0" prefWidth="338.0" style="-fx-background-color: #bd9f87;" text="Edit Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="Home" layoutX="6.0" layoutY="593.0" mnemonicParsing="false" onAction="#conectHomeButtonOnAction" prefHeight="59.0" prefWidth="338.0" style="-fx-background-color: #ffe6cc;" text="Home">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit" layoutX="166.0" layoutY="689.0" mnemonicParsing="false" onAction="#cancelExitOnAction" prefHeight="79.0" prefWidth="88.0" style="-fx-background-color: #bd9f87;" text="Exit">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="78.0" fitWidth="139.0" layoutX="71.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(8).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="802.0" prefWidth="909.0" style="-fx-background-color: #c4ac88;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#32240a" height="111.0" stroke="#4d442d" strokeType="INSIDE" width="927.0" />
+            <TableView fx:id="Id" editable="true" layoutX="25.0" layoutY="211.0" prefHeight="489.0" prefWidth="900.0" style="-fx-background-color: #ffe6cc;">
+              <columns>
+                <TableColumn fx:id="Name" prefWidth="127.0" text="Name" />
+                <TableColumn fx:id="Phone" minWidth="7.0" prefWidth="152.0" text="Phone" />
+                  <TableColumn fx:id="RoomNumber" prefWidth="151.0" text="Room Number" />
+                  <TableColumn fx:id="RoomType" prefWidth="154.0" text="Room Type" />
+                  <TableColumn fx:id="Bill" minWidth="0.0" prefWidth="162.0" text="Bill" />
+                  <TableColumn fx:id="Date" prefWidth="153.0" text="Date" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="56.0" layoutY="27.0" prefHeight="45.0" prefWidth="809.0" text="Managerment" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="49.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Find" layoutX="26.0" layoutY="130.0" prefHeight="53.0" prefWidth="878.0" promptText="Enter the customer's Room Number">
+               <font>
+                  <Font name="Britannic Bold" size="26.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="118.0" fitWidth="110.0" layoutX="809.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Magnifying%20glass,%20search%20icon%20-%20Free%20download%20on%20Iconfinder.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Search" layoutX="301.0" layoutY="722.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="50.0" prefWidth="318.0" style="-fx-background-color: #ffe6cc;" text="Find Customer">
+               <font>
+                  <Font name="Britannic Bold" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.qlnn1.ControllDasboard">
+   <left>
+      <AnchorPane prefHeight="802.0" prefWidth="350.0" style="-fx-background-color: #604c40;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fill="#1f93ff00" layoutX="176.0" layoutY="110.0" radius="77.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <ImageView fitHeight="168.0" fitWidth="159.0" layoutX="96.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(7).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="DashBoard" layoutX="6.0" layoutY="258.0" mnemonicParsing="false" onAction="#conectDashBoard" prefHeight="59.0" prefWidth="338.0" style="-fx-background-color: #ffe6cc;" text="DashBoard">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddCustomer" layoutX="6.0" layoutY="340.0" mnemonicParsing="false" onAction="#conectAdd" prefHeight="59.0" prefWidth="337.0" style="-fx-background-color: #bd9f87;" text="Add Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button> 
+            <Button fx:id="RemoveCustomer" layoutX="7.0" layoutY="421.0" mnemonicParsing="false" onAction="#conectRemove" prefHeight="59.0" prefWidth="336.0" style="-fx-background-color: #bd9f87;" text="Remove Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="EditCustomer" layoutX="6.0" layoutY="506.0" mnemonicParsing="false" onAction="#conectEditButtonOnAction" prefHeight="59.0" prefWidth="338.0" style="-fx-background-color: #bd9f87;" text="Edit Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="Home" layoutX="6.0" layoutY="595.0" mnemonicParsing="false" onAction="#conectHomeButtonOnAction" prefHeight="59.0" prefWidth="338.0" style="-fx-background-color: #bd9f87;" text="Home">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit" layoutX="175.0" layoutY="688.0" mnemonicParsing="false" onAction="#cancelExitOnAction" prefHeight="79.0" prefWidth="88.0" style="-fx-background-color: #bd9f87;" text="Exit">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="78.0" fitWidth="139.0" layoutX="80.0" layoutY="689.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(8).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="802.0" prefWidth="918.0" style="-fx-background-color: #c4ac88;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#32240a" height="111.0" stroke="#4d442d" strokeType="INSIDE" width="927.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="205.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="327.0" layoutY="217.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="588.0" layoutY="217.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="67.0" layoutY="217.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <ImageView fitHeight="170.0" fitWidth="136.0" layoutX="130.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/f428acc4ae06e45ee9b6edfea8c306c6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="106.0" layoutX="667.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/e20d9108427b28ea68e4a4ffcfd0a18e.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="107.0" layoutX="283.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/5c7e34781cb3b89c2a0bdc10da7b35ea.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="142.0" layoutX="399.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/ef8f190692a8b3d595fdee2d7b835b9e.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="-24.0" prefHeight="159.0" prefWidth="921.0" text="DashBoard" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="49.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="458.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <ImageView fitHeight="110.0" fitWidth="105.0" layoutX="536.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/fd6fb19f0ccaea4ad9db94963b40b09a.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="433.0" prefHeight="43.0" prefWidth="262.0" text="Total Room">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="328.0" layoutY="433.0" prefHeight="43.0" prefWidth="262.0" text="Total Earning">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="589.0" layoutY="433.0" prefHeight="43.0" prefWidth="262.0" text="Booked Room">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="205.0" layoutY="688.0" prefHeight="43.0" prefWidth="262.0" text="Available Room">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="459.0" layoutY="688.0" prefHeight="43.0" prefWidth="262.0" text="Pending Payment">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalroom" alignment="CENTER" layoutX="145.0" layoutY="379.0" prefHeight="43.0" prefWidth="101.0" textFill="#bc0e0e">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalearning" alignment="CENTER" layoutX="409.0" layoutY="379.0" prefHeight="43.0" prefWidth="101.0" textFill="#bc0e0e">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookedroom" alignment="CENTER" layoutX="669.0" layoutY="380.0" prefHeight="43.0" prefWidth="101.0" textFill="#bc0e0e">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="availableroom" alignment="CENTER" layoutX="285.0" layoutY="645.0" prefHeight="43.0" prefWidth="101.0" textFill="#bc0e0e">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="pendingpayment" alignment="CENTER" layoutX="540.0" layoutY="645.0" prefHeight="43.0" prefWidth="101.0" textFill="#bc0e0e">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

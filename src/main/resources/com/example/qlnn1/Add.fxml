@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.qlnn1.ControllAdd">
+   <left>
+      <AnchorPane prefHeight="802.0" prefWidth="350.0" style="-fx-background-color: #604c40;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fill="#1f93ff00" layoutX="176.0" layoutY="110.0" radius="77.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+            <ImageView fitHeight="168.0" fitWidth="159.0" layoutX="96.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(7).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="DashBoard" layoutX="6.0" layoutY="258.0" mnemonicParsing="false" onAction="#conectDashBoard" prefHeight="59.0" prefWidth="327.0" style="-fx-background-color: #bd9f87;" text="DashBoard">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddCustomer" layoutX="6.0" layoutY="340.0" mnemonicParsing="false" onAction="#conectAdd" prefHeight="59.0" prefWidth="327.0" style="-fx-background-color: #ffe6cc;" text="Add Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="RemoveCustomer" layoutX="7.0" layoutY="421.0" mnemonicParsing="false" onAction="#conectRemove" prefHeight="59.0" prefWidth="327.0" style="-fx-background-color: #bd9f87;" text="Remove Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="EditCustomer" layoutX="6.0" layoutY="506.0" mnemonicParsing="false" onAction="#conectEditButtonOnAction" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #bd9f87;" text="Edit Customer">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="Home" layoutX="6.0" layoutY="593.0" mnemonicParsing="false" onAction="#conectHomeButtonOnAction" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #bd9f87;" text="Home">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit" layoutX="170.0" layoutY="689.0" mnemonicParsing="false" onAction="#cancelExitOnAction" prefHeight="79.0" prefWidth="88.0" style="-fx-background-color: #bd9f87;" text="Exit">
+               <font>
+                  <Font name="Britannic Bold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="78.0" fitWidth="139.0" layoutX="75.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Thiết%20kế%20chưa%20có%20tên%20(8).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="Add" prefHeight="802.0" prefWidth="918.0" style="-fx-background-color: #c4ac88;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="AddButton" layoutX="27.0" layoutY="647.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="61.0" prefWidth="877.0" style="-fx-background-color: #604c40;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#32240a" height="111.0" stroke="#4d442d" strokeType="INSIDE" width="927.0" />
+            <ImageView fitHeight="406.0" fitWidth="405.0" layoutX="493.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/d395f22eca1e21caf430d0f5f8a9c874.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="24.0" prefHeight="64.0" prefWidth="925.0" text="Add Customer" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="49.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="139.0" prefHeight="78.0" prefWidth="141.0" text="Name:">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="217.0" prefHeight="78.0" prefWidth="141.0" text="Phone:">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="28.0" layoutY="381.0" prefHeight="78.0" prefWidth="160.0" text="Room Type:">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="28.0" layoutY="295.0" prefHeight="78.0" prefWidth="209.0" text="Room Number:">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Name" layoutX="262.0" layoutY="164.0" prefHeight="36.0" prefWidth="249.0" promptText="Name" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Phone" layoutX="262.0" layoutY="235.0" prefHeight="36.0" prefWidth="249.0" promptText="Phone">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="RoomNumber" layoutX="262.0" layoutY="313.0" prefHeight="36.0" prefWidth="249.0" promptText="Room Number">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="RoomType" layoutX="262.0" layoutY="399.0" prefHeight="36.0" prefWidth="249.0" promptText="Room Type">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="459.0" prefHeight="78.0" prefWidth="141.0" text="Bill:     ">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Bill" layoutX="262.0" layoutY="486.0" prefHeight="36.0" prefWidth="249.0" promptText="Bill">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="397.0" fitWidth="375.0" layoutX="511.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Isometric%203D%20room,%20Laura%20Gómez.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="433.0" fitWidth="446.0" layoutX="480.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/Saved%20Pictures/Isometric%20Rooms.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="18.0" layoutY="537.0" prefHeight="78.0" prefWidth="141.0" text="Date:     ">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Date" layoutX="260.0" layoutY="555.0" prefHeight="42.0" prefWidth="253.0" promptText="Number of rental days" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
