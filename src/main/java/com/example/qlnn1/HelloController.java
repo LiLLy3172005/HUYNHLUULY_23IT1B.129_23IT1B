@@ -30,9 +30,19 @@ public class HelloController {
     @FXML
     private Button cancelButton;
     @FXML
+    private Button signup;
+    @FXML
     public Label loginMessageLabel;
 
     private Connection connection;
+
+    public void conectsignup(ActionEvent e) throws IOException {
+        Stage stage = (Stage)this.signup.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SignUp.fxml"));
+        Scene Scene = new Scene((Parent)fxmlLoader.load(), 1085.0, 802.0);
+        stage.setScene(Scene);
+        stage.show();
+    }
 
     public void loginButtonOnAction(ActionEvent e) {
 
@@ -55,12 +65,17 @@ public class HelloController {
     }
 
 
+
+
     private void validateLogin() {
         try {
             connection = LUULY1.getConnection();
 
             // Prepare the SQL statement
-            String query = "SELECT count(*) FROM IdUser WHERE Username = ? AND Password = ?";
+            String query = "SELECT count(*) FROM IdUsers WHERE UserName = ? AND PassWords = ?";
+            System.out.println("Query: " + query);
+            System.out.println("Username: " + usernameTextField.getText());
+            System.out.println("Password: " + passwordPasswordField.getText());
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, usernameTextField.getText());
                 preparedStatement.setString(2, passwordPasswordField.getText());
@@ -68,28 +83,23 @@ public class HelloController {
                 // Execute the query
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     // Check if the user exists
-                    if (resultSet.next() && resultSet.getInt(1) == 2) {
+                    if (resultSet.next() && resultSet.getInt(1) == 1) {
                         // User with the provided username and password exists
                         loginMessageLabel.setText("Login successful");
-                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-                 //    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/qlnn1/hello-view.fxml"));
-                     //  Parent root = fxmlLoader.load();
-                       // fxmlLoader.setController(new ControllMain());
-                        Scene newScene = new Scene(fxmlLoader.load(), 1268, 802);
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Chosen.fxml"));
+                        Parent root = fxmlLoader.load();
+                        Scene newScene = new Scene(root, 1085, 802);
 
-                        // Lấy stage hiện tại và thiết lập cảnh mới
+                        // Get the current stage and set the new scene
                         Stage currentStage = (Stage) loginMessageLabel.getScene().getWindow();
                         currentStage.setScene(newScene);
-                        // Additional logic for a successful login can be added here
                     } else {
                         // No user with the provided username and password
                         loginMessageLabel.setText("Invalid username or password");
                     }
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
             }
-        } catch (SQLException ex) {
+        } catch (SQLException | IOException ex) {
             ex.printStackTrace();
         } finally {
             try {
@@ -101,6 +111,7 @@ public class HelloController {
             }
         }
     }
+
 }
 
 

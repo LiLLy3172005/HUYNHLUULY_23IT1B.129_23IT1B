@@ -13,10 +13,10 @@ public class LUULY1 {
     }
        public static Connection getConnection() {
         Connection databaselink = null;
-           String databaseName = "master";
+           String databaseName = "HotelManagements";
            String databaseUser = "sa";
-           String databasePassword = "123";
-           String ulr = "jdbc:sqlserver://localhost:1433;databaseName=master;user=sa;password=123;encrypt=false";
+           String databasePassword = "12345";
+           String ulr = "jdbc:sqlserver://localhost:1433;databaseName=HotelManagements;user=sa;password=12345;encrypt=false";
            setEncrypt(false);
            try {
                Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
